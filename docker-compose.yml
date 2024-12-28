@@ -3,8 +3,6 @@ services:
   backend:
     image: fayeque123/ygwebapp:latest
     container_name: spring-boot-app
-    build:
-      context: ./backend
     ports:
       - "8080:8090" # Expose API to the host
     networks:
@@ -13,8 +11,6 @@ services:
   frontend:
     image: fayeque123/ygwebfe:latest
     container_name: next-js-app
-    build:
-      context: ./frontend
     ports:
       - "3000:3000" # Expose Next.js app to the host
     networks:
